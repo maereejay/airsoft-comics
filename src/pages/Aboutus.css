@@ -194,7 +194,7 @@ about-us-page > a:hover {
 }
 
 /* Buttons-style links */
-.capabilities-links a {
+.capabilities-links a, .capabilities-links button {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -203,9 +203,13 @@ about-us-page > a:hover {
   color: orange;
   text-decoration: underline;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: var(--font-body);
+  font-size: inherit;
 }
 
-.capabilities-links a:hover {
+.capabilities-links a:hover,.capabilities-links button:hover {
 
   color: red;
 
