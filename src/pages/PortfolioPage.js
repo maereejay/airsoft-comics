@@ -7,9 +7,9 @@ const artworks = [
     title: "Manga",
     description: "High energy manga panel with dramatic motion lines.",
     images: [
-      "/portfolio/Manga1.jpg",
-      "/portfolio/Manga2.jpg",
-      "/portfolio/Manga3.jpg",
+      "/portfolio/Manga1.JPG",
+      "/portfolio/Manga2.JPG",
+      "/portfolio/Manga3.JPG",
     ]
   },
   {
@@ -17,9 +17,9 @@ const artworks = [
     title: "Western",
     description: "Bold western comic style with strong inking.",
     images: [
-      "/portfolio/Western1.jpg",
-      "/portfolio/Western2.jpg",
-      "/portfolio/Western3.jpg",
+      "/portfolio/Western1.JPG",
+      "/portfolio/Western2.JPG",
+      "/portfolio/Western3.JPG",
     ]
   },
   {
@@ -27,9 +27,9 @@ const artworks = [
     title: "Cartoon",
     description: "Expressive cartoon design with vibrant character focus.",
     images: [
-      "/portfolio/Cartoon1.jpg",
-      "/portfolio/Cartoon2.jpg",
-      "/portfolio/Cartoon3.jpg",
+      "/portfolio/Cartoon1.JPG",
+      "/portfolio/Cartoon2.JPG",
+      "/portfolio/Cartoon3.JPG",
     ]
   },
   {
@@ -37,9 +37,9 @@ const artworks = [
     title: "Realism",
     description: "Detailed realistic comic-style illustration.",
     images: [
-      "/portfolio/Realism.png",
-      "/portfolio/Realism2.jpg",
-      "/portfolio/Realism3.jpg",
+      "/portfolio/Realism.PNG",
+      "/portfolio/Realism2.JPG",
+      "/portfolio/Realism3.JPG",
     ]
   },
   {
@@ -47,9 +47,9 @@ const artworks = [
     title: "Semi Realism",
     description: "Balanced stylized realism with expressive features.",
     images: [
-      "/portfolio/SemiReal1.jpg",
-      "/portfolio/SemiReal2.jpg",
-      "/portfolio/SemiReal3.jpg",
+      "/portfolio/SemiReal1.JPG",
+      "/portfolio/SemiReal2.JPG",
+      "/portfolio/SemiReal3.JPG",
     ]
   }
 ];
