@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "./Portfolio.css";
 
 const slides = [
@@ -11,26 +11,30 @@ const slides = [
 export default function Portfolio() {
   const [index, setIndex] = useState(0);
 
+  // Stable next/prev functions
+  const nextSlide = useCallback(() => {
+    setIndex((prev) => (prev + 1) % slides.length);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  }, []);
+
   // Auto-slide
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
+    const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
-  }, []); 
-  // Keyboard navigation
+  }, [nextSlide, prevSlide]); 
+
+  // Optional: keyboard navigation
   useEffect(() => {
     const handleKey = (e) => {
-      if (e.key === "ArrowRight") setIndex((prev) => (prev + 1) % slides.length);
-      if (e.key === "ArrowLeft") setIndex((prev) => (prev - 1 + slides.length) % slides.length);
+      if (e.key === "ArrowRight") nextSlide();
+      if (e.key === "ArrowLeft") prevSlide();
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, []); 
-
-  const nextSlide = () => setIndex((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  }, [nextSlide, prevSlide]); 
 
   return (
     <section className="mp-section">
