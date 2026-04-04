@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "./PortfolioPage.css";
 import { Helmet } from "react-helmet";
 const artworks = [
@@ -88,27 +88,24 @@ export default function PortfolioPage(){
 
   const close = ()=> setActiveWork(null);
 
-  const next = ()=>{
-    setImageIndex((prev)=> (prev+1)%activeWork.images.length);
+  const next = useCallback(() => {
+  setImageIndex((prev) => (prev + 1) % activeWork.images.length);
+}, [activeWork]);
+
+const prev = useCallback(() => {
+  setImageIndex((prev) => (prev - 1 + activeWork.images.length) % activeWork.images.length);
+}, [activeWork]);
+
+useEffect(() => {
+  const keyHandler = (e) => {
+    if (!activeWork) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowRight") next();
+    if (e.key === "ArrowLeft") prev();
   };
-
-  const prev = ()=>{
-    setImageIndex((prev)=>
-      (prev-1+activeWork.images.length)%activeWork.images.length
-    );
-  };
-
-  useEffect(()=>{
-    const keyHandler = (e)=>{
-      if(!activeWork) return;
-      if(e.key==="Escape") close();
-      if(e.key==="ArrowRight") next();
-      if(e.key==="ArrowLeft") prev();
-    };
-    window.addEventListener("keydown",keyHandler);
-    return ()=>window.removeEventListener("keydown",keyHandler);
-  },[activeWork]);
-
+  window.addEventListener("keydown", keyHandler);
+  return () => window.removeEventListener("keydown", keyHandler);
+}, [activeWork, next, prev]);
   return(
     <div className="portfolioPage">
       <Helmet>
