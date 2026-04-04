@@ -1,0 +1,121 @@
+.mf-section {
+  padding: 90px 20px;
+  background:
+    radial-gradient(circle, rgba(159, 158, 158, 0.06) 1px, transparent 1px),
+    #ffffff;
+  background-size: 14px 14px;
+  text-align: center;
+  width: 100vw;
+  background-color: var(--color-outline);
+}
+
+.mf-title {
+   margin-bottom: 30px;
+  color: white;
+  text-transform: uppercase;
+   font-family: var(--font-subheading);
+     text-shadow: 
+    2px 2px 0 #000000,    
+    -2px -2px 0 #000000,
+    2px -2px 0 #000000,
+    -2px 2px 0 #000000;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+  text-transform: uppercase;
+}
+
+/* container */
+
+.mf-container {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* card */
+
+.mf-card {
+  background: white;
+  border: 5px solid #000;
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+
+  box-shadow: 6px 6px 0 #000;
+  transition: transform 0.15s ease;
+}
+
+.mf-card:hover {
+  transform: translateY(-2px);
+}
+
+/* question */
+
+.mf-question {
+  padding: 20px 24px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-navbar);
+  letter-spacing: 0.23em;
+}
+
+/* arrow */
+
+.mf-arrow {
+  font-size: 18px;
+  transition: transform 0.35s ease;
+
+}
+
+.mf-card.open .mf-arrow {
+  transform: rotate(180deg);
+}
+
+/* answer panel */
+
+.mf-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease, padding 0.3s ease;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,0.03),
+      rgba(0,0,0,0.03) 6px,
+      transparent 6px,
+      transparent 12px
+    );
+}
+
+.mf-card.open .mf-answer {
+  max-height: 200px;
+  padding: 0 24px 20px 24px;
+}
+
+.mf-answer p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.98rem;
+  font-family: var(--font-body);
+}
+
+/* comic speech bubble effect */
+
+.mf-card.open {
+  position: relative;
+}
+
+.mf-card.open::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 40px;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 18px solid #000;
+}

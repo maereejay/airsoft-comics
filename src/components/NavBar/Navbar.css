@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbarContainer{
+  padding: 0 2em;
+  display: flex;
+  flex-wrap: wrap;
+  width: 99%;
+  align-items: center;
+  flex-direction: column;
+}
+.navbarWrapper {
+  position: relative;
+  padding-bottom: 8px;
+
+}
+.navbar {
+  border: 3.5px solid var(--color-outline);
+  padding: 0.2em 2.5em;
+  border-radius: 4px;
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 1;
+  position: relative;
+ 
+}
+.navbarWrapper::before{
+  content:"";
+  position:absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 80%; 
+  background: var(--color-navbar);
+  transform:translateY(8px) translateX(-5px);
+  z-index:-1;
+  border-radius: 2px;
+}
+
+.navbarContainer ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li{
+  font-size: clamp(0.8rem, 1.5vw, 2.5rem);
+  font-family: var(--font-navbar);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.35);
+}
+
+/* links */
+.navbar a{
+  text-decoration:none;
+  color:grey;
+  transition:.2s;
+}
+
+/* hover OR active */
+.navbar a:hover,
+.navbar a.activeNav{
+  color:#000;
+}
+.logo{
+  margin: 1em 0;
+  max-width: 120px;
+  max-height: 12s0px;
+}
+.logo img{
+  height: 100%;
+  width: 100%;
+}
+/* .helpBox {
+  display: inline-block;
+  padding: 0.2em 0.9em;
+  background: white;
+  border-radius: 50% / 50%; 
+  position: relative;        
+  font-weight: bold;
+  font-size: clamp(1rem, 1.4vw, 2.5rem);
+  margin-left: auto;
+font-family:var(--font-needhelp);
+border: 2px solid var(--color-outline);
+
+} */
+
+
+
+
+
+@media (max-width: 768px) {
+  .navbarContainer {
+    justify-content: center; 
+    gap: 1em;
+  }
+  .navbarContainer ul{
+    gap:10px;
+  }
+  .navbarWrapper {
+    padding-bottom: 0;
+    
+  }
+  .navbarWrapper::before{
+    height: 100%;
+  }
+  .navbar {
+    padding: 0.2em 0.7em;
+
+  }
+  .helpBox{
+    margin-left: 0;
+  }
+}

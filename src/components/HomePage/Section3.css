@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Section3Container {
+    background-color: var(--color-outline);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section3{
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    width: 80vw;
+    color: white;
+}
+.section3 h1{
+      margin-bottom: 0.2em;
+    font-family: var(--font-subheading);
+     text-shadow: 
+    2px 2px 0 #000000,    
+    -2px -2px 0 #000000,
+    2px -2px 0 #000000,
+    -2px 2px 0 #000000;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+.processContainer{
+
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+    
+}
+.processContent {
+        border: 5px solid white;
+          border-radius: 4px;
+ background-image:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("/public/comicpanel.JPG");
+
+     background-repeat: repeat-y;              
+  background-size: 100% auto;
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1.4em 0.8em;
+    flex-wrap: wrap;
+}
+.processContent > div {
+    border: 2px solid orange;
+    width: 300px;
+    height: 135px;
+    background-color: #000000a2;
+    padding: 0em 0.8em;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+}
+.processContent > div:hover {
+ border-color: white;
+  transform: translate(-2px,-2px);
+  box-shadow: 8px 8px 0 #000;
+}
+.processContent  span {
+    font-family: var(--font-needhelp);
+    color: white;
+    font-size: 2.2rem;
+   
+   
+}
+.processContent h3{
+    font-family: var(--font-navbar);
+    letter-spacing: 0.1em;
+    color: orange;
+}
+.processContent p{
+    font-family: var(--font-body);
+
+        font-size: clamp(0.9rem, 1vw, 1rem);
+    line-height: 1em;
+}
+.endsect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.2em;
+}
+.endsect p {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      flex-direction: column;
+      gap: 0.1em;
+    font-family: var(--font-body);
+     font-size: clamp(0.7rem, 1.3vw, 1.5rem);
+}
+.endsect p span{
+    font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+    font-family: var(--font-navbar);
+    letter-spacing: 0.1em;
+    margin-top: 1em;
+    display: block;
+    text-align: center;
+    width: fit-content;
+    padding-bottom: 0.1em;
+    border-bottom: 1.5px solid white;
+    transition: all ease-in 0.2s;
+    cursor: pointer;
+}
+.endsect p span a {
+    text-decoration: none;
+       color: orange;
+}
+.endsect p span:hover{
+  color: white;
+  border-color: orange;
+}

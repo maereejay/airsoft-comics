@@ -1,0 +1,121 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.section1Container{
+  width: 100%;
+  padding: 1.5em;
+  border: 2px solid black;
+   border-radius: 4px;
+    margin-bottom: 3em;
+}
+.section1{
+    
+    /* background-color: var(--color-outline); */
+   background-image: url("/public/hmpg3.JPG");
+    border-radius: 5px;
+    padding: 2.5em 3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  
+
+}
+
+
+
+/* Heading */
+.section1__title {
+  margin-top: 12%;
+  font-size: clamp(1rem, 4vw, 2.5rem);
+
+  color: white;
+  
+    font-family: var(--font-title);
+   letter-spacing: 0.05em; 
+   /* comic pop effect */
+  text-shadow: 
+    2px 2px 0 #000,    /* black outline shadow */
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000;
+
+  display: inline-block;
+
+}
+
+/* Paragraph text */
+.section1__text {
+  font-size: clamp(0.8rem, 2.3vw, 1.2rem);
+  line-height: 1.6;
+  margin-top: 1%;
+  color: var(--color-bg);
+  font-family: var(--font-subheading);
+  text-align: justify;
+  max-width: 520px;
+
+}
+.section1__content {
+  display: flex;
+  flex-direction: column;
+   align-items:flex-start !important;
+
+}
+.sect1contact{
+  margin-top: 3%;
+   color: #fff;
+   padding: 0.7em;
+   border-radius: 5px;
+   background-color: #00000066;
+     font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(0.6rem, 1.6vw, 0.9rem);
+ 
+}
+.sect1contact p {
+  width: fit-content;
+  max-width: 300px;
+}
+/* Button / link */
+.section1__button {
+  width: fit-content;
+  display: inline-block;
+  color: var(--color-highlight);
+  text-decoration: none;
+  font-weight: bold;
+  color: orange;
+  transition: color 0.3s;
+  font-family: 'Permanent Marker', cursive;
+    font-size: clamp(0.4rem, 1.6vw, 0.9rem);
+
+ 
+}
+
+.section1__button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .section1 {
+        background-size: cover;     
+        background-position: center;    
+        background-repeat: no-repeat;  
+        padding: 2.5em 2em;
+    }
+    .section1__text {
+    background-color: #000000af;
+    padding: 1em;
+    border-radius: 3px;
+    line-height: 1.5em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    text-align: left;
+
+}
+ .section1__title{
+    max-width: 70%;
+ }
+}
+

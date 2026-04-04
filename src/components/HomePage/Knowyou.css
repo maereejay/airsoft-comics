@@ -1,0 +1,107 @@
+.gky-section {
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px),
+    var(--color-outline);
+  background-size: 14px 14px;
+}
+
+.gky-container {
+  width: 60vw;
+  text-align: center;
+  padding: 40px 45px;
+  border-radius: 12px;
+
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 8px 8px 0 #000;
+  cursor: pointer;
+  animation: fadeUp 0.8s ease;
+  transition: all ease-in-out 0.2s;
+  position: relative;
+}
+
+
+
+.gky-container:hover {
+  border-color: orange;
+  box-shadow: 12px 12px 0 #000;
+}
+
+.gky-title {
+  font-family: var(--font-subheading);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  color: #fff;
+  margin-bottom: 15px;
+
+  text-shadow:
+    3px 3px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000;
+}
+
+.gky-description {
+  line-height: 1.7;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 25px;
+  font-family: var(--font-body);
+  font-size: clamp(0.8rem, 1.4vw, 1.2rem);
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 12px 18px;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 4px 4px 0 #000 inset;
+}
+
+.gky-button {
+  font-family: var(--font-navbar);
+  letter-spacing: 0.25em;
+  font-size: clamp(0.5rem, 1.5vw, 1rem);
+  padding: 14px 32px;
+  font-weight: 700;
+  border-radius: 50px;
+  border: 3px solid transparent;
+  cursor: pointer;
+
+  color: white;
+  background: orange;
+  box-shadow: 5px 5px 0 #000;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.gky-button:hover {
+  transform: translate(-2px,-2px) scale(1.05);
+  background-color: transparent;
+  border-color: white;
+  color: orange;
+  box-shadow: 8px 8px 0 #000;
+}
+
+.gky-button:active {
+  transform: translate(0px,0px) scale(0.97);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .gky-container{
+    width: 80vw;
+  }
+}

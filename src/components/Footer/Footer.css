@@ -1,0 +1,116 @@
+.mftr-footer {
+  margin-top: 40px;
+  background:
+    radial-gradient(circle, rgba(0,0,0,0.06) 1px, transparent 1px),
+    #ffffff;
+  background-size: 14px 14px;
+  border-top: 6px solid #000;
+  width: 100vw;
+  background-color: var(--color-bg);
+  
+
+}
+
+/* MAIN GRID */
+.mftr-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 40px;
+}
+.mftr-container > div {
+  width: 100%;
+}
+
+/* LOGO */
+
+.mftr-logo {
+  font-size: 2rem;
+  font-weight: 900;
+  border: 4px solid #000;
+  display: inline-block;
+  padding: 10px 18px 0;
+  background: #fff;
+  box-shadow: 4px 4px 0 #000;
+  margin-bottom: 16px;
+}
+.mftr-logo img{
+  width: 150px;
+  height: 50px;
+}
+/* HEADINGS */
+
+.mftr-heading {
+  font-family: var(--font-subheading);
+  color: var(--color-outline);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  display: inline-block;
+  padding: 6px 14px;
+  border: 3px solid #000;
+  background: #fff;
+  box-shadow: 3px 3px 0 #000;
+}
+
+/* TEXT */
+
+.mftr-text {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+}
+
+.mftr-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mftr-col li {
+  padding: 6px 0;
+  font-weight: 600;
+  font-family: var(--font-body);
+}
+.mftr-col p {
+     font-family: var(--font-body);
+}
+
+/* BOTTOM BAR */
+
+.mftr-bottom {
+    width: 100vw;
+    font-family: var(--font-body);
+  border-top: 4px solid #000;
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+ 
+  margin: auto;
+  font-size: 0.9rem;
+}
+
+.mftr-links a {
+  margin-left: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+  border-bottom: 2px solid transparent;
+}
+
+.mftr-links a:hover {
+  border-bottom: 2px solid #000;
+}
+.contactItem a{
+  font-family: var(--font-body);
+  color: inherit;
+  margin-bottom: 0.4em;
+ transition:color 0.2s ease;
+}
+.contactItem a:hover{
+    text-decoration:underline;
+    color:orange;
+}

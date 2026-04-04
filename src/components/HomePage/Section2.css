@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section2{
+    background:
+      radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px),
+      var(--color-outline);
+    background-size: 14px 14px;
+    width: 100vw;
+    padding: 3em 2em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN PANEL */
+.s2aboutus {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80vw;
+    gap: 2em;
+    align-items: center;
+
+    border: 5px solid #fff;
+    border-radius: 10px;
+    padding: 0.7em 2em;
+    min-height: 450px;
+
+    background: rgba(255,255,255,0.03);
+    box-shadow: 8px 8px 0 #000;
+    position: relative;
+}
+
+/* comic corner notch */
+.s2aboutus::after{
+  content:"";
+  position:absolute;
+  top:-5px;
+  right:-5px;
+  width:40px;
+  height:40px;
+  background:var(--color-outline);
+  border-left:5px solid #fff;
+  border-bottom:5px solid #fff;
+}
+
+/* TEXT BLOCK */
+.s2aboutusText {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* TITLE */
+.s2aboutusText h1 {
+    margin-bottom: 0.5em;
+    font-family: var(--font-subheading);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    text-shadow:
+      3px 3px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000;
+}
+
+/* SUBTITLE */
+.s2aboutus h3 {
+    font-family: var(--font-navbar);
+    letter-spacing: 0.25em;
+    font-size: clamp(0.9rem, 2vw, 1.4rem);
+    margin-bottom: 0.4em;
+    color: orange;
+
+    display: inline-block;
+    padding: 4px 10px;
+    border: 2px solid orange;
+    background: rgba(0,0,0,0.25);
+    box-shadow: 3px 3px 0 #000;
+}
+
+/* BODY */
+.s2aboutusText > p {
+    max-width: 420px;
+    font-family: var(--font-body);
+    font-size: clamp(0.7rem, 1.3vw, 1rem);
+    line-height: 1.6;
+}
+
+/* LINK - comic CTA */
+.s2aboutusText a {
+    width: fit-content;
+    margin-top: 0.9em;
+    text-decoration: none;
+    color: white;
+    font-family: var(--font-body);
+    font-size: clamp(0.6rem, 1.2vw, 0.95rem);
+
+    padding: 6px 14px;
+    border: 3px solid orange;
+    background: transparent;
+    box-shadow: 3px 3px 0 #000;
+    transition: all 0.15s ease;
+}
+
+.s2aboutusText a:hover {
+    background: orange;
+    color: #000;
+    transform: translate(-2px,-2px);
+    box-shadow: 6px 6px 0 #000;
+}
+
+/* VIDEO PANEL */
+.s2aboutusVid {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    min-height: 300px;
+    width: 424px;
+
+    border: 5px solid orange;
+    padding: 1em;
+    background: #fff;
+    box-shadow: 8px 8px 0 #000;
+      cursor: pointer;
+
+    position: relative;
+ 
+      flex-direction: column;
+}
+
+/* manga label */
+.s2aboutusVid::before{
+  content:"PREVIEW";
+  position:absolute;
+  top:-16px;
+  left:18px;
+  background:#000;
+  color:#fff;
+  font-size:12px;
+  padding:4px 8px;
+  border:2px solid #fff;
+  letter-spacing:1px;
+}
+
+.s2aboutusVid > div {
+    border: 3px solid #000;
+    min-height: 240px;
+    width: 100%;
+    background:
+      repeating-linear-gradient(
+        45deg,
+        #e5e5e5,
+        #e5e5e5 8px,
+        #d4d4d4 8px,
+        #d4d4d4 16px
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+}
+.s2aboutusVid video {
+  width: 100%;
+}
+.videoOverlay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+/* .controls {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+} */
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .section2{
+    padding: 2.5em 1.4em;
+  }
+
+  .s2aboutus{
+     padding: 23px 20px;
+     gap: 1.4em;
+  }
+
+ .s2aboutusVid {
+    height: 300px;
+    width: 100%;
+ }
+
+}

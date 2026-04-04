@@ -1,0 +1,144 @@
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  justify-content:center;
+  width: 100vw;
+  background-color: white;
+}
+
+.galleryItem{
+  position:relative;
+  width:204px;
+  overflow:hidden;
+  cursor:pointer;
+ height: 255px;
+}
+
+.galleryItem img{
+  width:100%;
+  display:block;
+  transition:transform .4s ease;
+}
+
+.galleryItem:hover img{
+  transform:scale(1.08);
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.45);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  transition:.3s;
+}
+
+.galleryItem:hover .overlay{
+  opacity:1;
+}
+
+.overlay span{
+  color:white;
+  font-size:60px;
+}
+.lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+  animation:fade .3s ease;
+}
+
+@keyframes fade{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+.lightboxContent{
+  position:relative;
+  text-align:center;
+  animation:zoom .3s ease;
+}
+
+@keyframes zoom{
+  from{transform:scale(.85)}
+  to{transform:scale(1)}
+}
+
+.lightboxImg{
+  max-width:60vw;
+  max-height:80vh;
+}
+
+.closeBtn{
+  position:absolute;
+  top:-45px;
+  right:0;
+  background: orange;
+  color: white;
+  border:2px solid white;
+  font-size:18px;
+  padding:5px 10px;
+  cursor:pointer;
+   transition: all ease-in-out 0.2s;
+}
+
+.downloadBtn{
+  display:inline-block;
+  margin-top:15px;
+  padding:8px 11px;
+  background:orange;
+  border-radius: 20px;
+  border: 2px solid white;
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  margin-left: 1em;
+  transition: all ease-in-out 0.2s;
+}
+.closeBtn:hover, .downloadBtn:hover {
+  background: black;
+  border-color: orange;
+  color: orange;
+}
+.arrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:black;
+  border:2px solid orange;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size:25px;
+  font-weight: bold;
+  padding: 0em 0.3em;
+  cursor:pointer;
+   transition: all ease-in-out 0.2s;
+}
+.arrow:hover {
+  background: orange;
+  border-color: white;
+  color: white;
+
+}
+.lefta{ left:-40px; }
+.righta{ right:-40px; }
+
+
+@media (max-width: 768px) {
+  .galleryItem{
+  width:180px;
+}
+}

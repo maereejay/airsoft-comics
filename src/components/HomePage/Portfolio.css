@@ -1,0 +1,157 @@
+.mp-section {
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(153, 152, 152, 0.05) 2px, transparent 2px),
+    radial-gradient(circle at 80% 60%, rgba(188, 187, 187, 0.05) 2px, transparent 2px),
+    #f4f4f4;
+  background-size: 18px 18px, 22px 22px, auto;
+  text-align: center;
+  overflow: hidden;
+  width: 100vw;
+  background-color: var(--color-outline);
+}
+
+.mp-header {
+
+  margin-bottom: 17px;
+  color: white;
+  text-transform: uppercase;
+   font-family: var(--font-subheading);
+     text-shadow: 
+    2px 2px 0 #000000,    
+    -2px -2px 0 #000000,
+    2px -2px 0 #000000,
+    -2px 2px 0 #000000;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+/* SLIDER */
+
+.mp-slider {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* PANEL FRAME */
+
+.mp-slide-wrapper {
+  position: relative;
+  height: 480px;
+}
+
+.mp-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: scale(0.92) rotate(-1deg);
+  transition: all 0.7s ease;
+  pointer-events: none;
+}
+
+.mp-slide.active {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+  pointer-events: auto;
+}
+
+/* Manga panel border */
+
+.mp-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border: 6px solid #000;
+  border-radius: 12px;
+
+  box-shadow:
+    8px 8px 0 #000,
+    14px 14px 30px rgba(0,0,0,0.3);
+}
+
+/* SPEECH BUBBLE */
+
+.mp-caption {
+  position: absolute;
+  bottom: 25px;
+  left: 30px;
+  background: white;
+  padding: 18px 22px;
+  max-width: 60%;
+
+  border: 4px solid #000;
+  border-radius: 18px;
+  box-shadow: 5px 5px 0 #000;
+}
+
+.mp-caption::after {
+  content: "";
+  position: absolute;
+  bottom: -18px;
+  left: 40px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 18px solid #000;
+}
+
+.mp-caption h3 {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+}
+
+.mp-caption p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ARROWS */
+
+.mp-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 4px solid #000;
+  background: white;
+  width: 52px;
+  height: 52px;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 5;
+  transition: 0.2s;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.mp-arrow:hover {
+  background: #000;
+  color: white;
+}
+
+.mp-arrow.left { left: -25px; }
+.mp-arrow.right { right: -25px; }
+
+/* DOTS */
+
+.mp-dots {
+  margin-top: 30px;
+}
+
+.mp-dots span {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 7px;
+  border-radius: 50%;
+  border: 3px solid #000;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mp-dots span.active {
+  background: #000;
+  transform: scale(1.25);
+}

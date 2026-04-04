@@ -1,0 +1,263 @@
+/* about-us.css */
+
+/* Base font & background */
+.about-us-page {
+   margin: 3em 0em;
+  font-family: 'Comic Neue', 'Segoe UI', sans-serif; /* playful comic style */
+  color: #1a1a1a;
+  background: #fdfcfb; /* off-white paper vibe */
+  line-height: 1.6;
+  width: 80vw;
+   background-color: var(--color-bg);
+}
+
+/* Headers */
+.about-header h1 {
+  font-family: 'Bangers', cursive; /* bold manga/comic font */
+  color: black;
+  text-shadow: 2px 2px #f5f5f5;
+
+}
+
+.capabilities-section h2,
+.creators-section h2,
+.values-section h2,
+.history-section h2 {
+  font-family: 'Bangers', cursive;
+  color: var(--color-outline); /* bold red for attention */
+  border-bottom: 4px solid #222;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+letter-spacing: 0.1em;
+
+}
+.about-section h2{
+  font-family: 'Bangers', cursive;
+  color: orange;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.747);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.about-section {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.726), rgba(0,0,0,0.6)),
+    url("/public/comicpanel.JPG");
+  border: 4px dashed white; /* comic panel border style */
+  padding: 2rem;
+
+  border-radius: 12px;
+  color: white;
+  box-shadow: 8px 8px 0 #ccc; /* pop-out panel effect */
+  position: relative;
+  transition: all ease-in 0.2s;
+}
+/* Sections */
+
+.capabilities-section,
+.creators-section,
+.excellence-section,
+.values-section,
+.history-section {
+  border: 4px dashed #222; /* comic panel border style */
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fffdfa 0%, #f9f9f9 100%);
+  box-shadow: 8px 8px 0 #ccc; /* pop-out panel effect */
+  position: relative;
+}
+.about-section:hover,
+.excellence-section:hover {
+  transform:scale(1.02);
+}
+.capabilities-section:hover,
+.creators-section:hover,
+.values-section:hover,
+.history-section:hover{
+    border-color: orange;
+}
+.excellence-section{
+background-image:
+    linear-gradient(rgba(0, 0, 0, 0.726), rgba(0,0,0,0.6)),
+    url("/public/portfolio/Cartoon1.JPG");
+  border: 4px dashed white; /* comic panel border style */
+  padding: 2rem;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 8px 8px 0 #ccc; /* pop-out panel effect */
+  position: relative;
+    transition: all ease-in 0.2s;
+}
+.excellence-section h2{
+  font-family: 'Bangers', cursive;
+  color: orange;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.747);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;   
+}
+/* Add corner bite effect for manga style */
+.about-section::before,
+.capabilities-section::before,
+.creators-section::before,
+.excellence-section::before,
+.values-section::before,
+.history-section::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30px;
+  height: 30px;
+  background: #fdfcfb;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  border-top: 4px solid #222;
+  border-right: 4px solid #222;
+}
+
+/* Paragraph styling */
+.about-section p,
+.capabilities-section p,
+.creators-section p,
+.excellence-section p,
+.values-section p,
+.history-section p {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+/* Container for numbers */
+.creators-section ul {
+    padding: 1em 2em 2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  justify-content: center;
+}
+/* Each number circle */
+.creators-section ul li {
+  position: relative;
+  background: #fff;
+  border: 4px solid orange;
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  box-shadow: 6px 6px 0 #ccc; /* pop-out comic panel effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Comic Neue', sans-serif;
+  cursor: default;
+  background-image: radial-gradient(circle at 30% 30%, #ffeee1 0%, #ffffff 100%); /* subtle manga feel */
+}
+/* Highlight numbers */
+.creators-section ul li::before {
+  content: attr(data-number);
+  font-family: 'Bangers', cursive;
+  font-size: 2.5rem;
+  color: orange;
+  text-shadow: 2px 2px #fff, 4px 4px #ccc; /* pop-out shadow */
+  display: block;
+
+}
+
+/* Stat text inside the circle */
+.creators-section ul li span {
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+/* Hover effect for dynamic feel */
+.creators-section ul li:hover {
+  transform: translateY(-5px) rotate(-2deg);
+  box-shadow: 10px 10px 0 #aaa;
+  background-image: radial-gradient(circle at 30% 30%, #fff0e1 0%, #fffcf8 100%);
+}
+
+/* Links */
+about-us-page > a {
+  color: #d32f2f;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px dashed #d32f2f;
+}
+
+about-us-page > a:hover {
+  color: #b71c1c;
+  border-bottom: 2px solid #b71c1c;
+}
+
+/* Buttons-style links */
+.capabilities-links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: fit-content;
+  color: orange;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.capabilities-links a:hover {
+
+  color: red;
+
+  transform: translateY(-2px);
+}
+.values-section > ul{
+    margin-bottom: 1em;
+}
+.values-section > ul > li span{
+    color: orange;
+    font-weight:bold;
+    font-family: var(--font-body);
+}
+.studio-hist-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2em;
+    align-items: center;
+    justify-content: center;
+
+}
+.stdhistImg{
+    height: 300px;
+    width: 400px;
+    background-image:
+    url("/public/portfolio/Western3.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 6px solid orange;
+      box-shadow:4px 4px 0 #000;
+      transition: all ease-in 0.1s;
+}
+.stdhistImg:hover {
+      transform: translateY(-5px);
+}
+.paragraphs{
+    width: 500px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section,
+  .capabilities-section,
+  .creators-section,
+  .excellence-section,
+  .values-section,
+  .history-section {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section4Container {
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px),
+    var(--color-outline);
+  background-size: 14px 14px;
+  width: 100vw;
+  padding: 3em 2em;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section4 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80vw;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #fff;
+  border-radius: 12px;
+  padding: 1em 2em;
+  min-height: 450px;
+  box-shadow: 8px 8px 0 #000;
+  background: rgba(0,0,0,0.25);
+  position: relative;
+}
+
+/* comic panel corner */
+.section4::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 40px;
+  height: 40px;
+  background: var(--color-outline);
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+}
+
+.section4 > div {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+width: fit-content;
+
+}
+
+/* HEADINGS */
+.section4 h1 {
+  margin-bottom: 0.5em;
+  font-family: var(--font-subheading);
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  text-shadow:
+    3px 3px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000;
+}
+
+.section4 h3 {
+  font-family: var(--font-navbar);
+  letter-spacing: 0.25em;
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  margin-bottom: 0.7em;
+  color: orange;
+  display: inline-block;
+  padding: 4px 10px;
+  border: 2px solid orange;
+  background: rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 0 #000;
+}
+
+
+
+/* FORM STYLING */
+form {
+  border: 4px solid orange;
+  display: grid;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.85);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2em 1em;
+  max-width: 490px;
+  min-height: 420px;
+  padding: 2em;
+  box-shadow: 5px 5px 0 #000;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+label {
+  font-family: var(--font-body);
+  color: white;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 12px;
+  min-height: 40px;
+  padding: 0.9em 1em;
+  color: white;
+  font-family: var(--font-body);
+  box-shadow: 3px 3px 0 #000 inset;
+}
+
+/* full width text area */
+.formField.full {
+  grid-column: 1 / -1;
+}
+
+/* SUBMIT BUTTON */
+.subtn {
+  background-color: orange;
+  border-radius: 12px;
+  color: black;
+  border: none;
+  text-align: center;
+  padding: 0.6em 1em;
+  font-family: var(--font-needhelp);
+  font-size: clamp(0.7rem, 1.4vw, 1.1rem);
+  cursor: pointer;
+  font-weight: 700;
+  transition: all ease-in-out 0.15s;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.subtn:hover {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+  color: white;
+  border: 2px solid white;
+  transform: translate(-2px,-2px);
+  box-shadow: 6px 6px 0 #000;
+}
+.contactIcon{
+  font-size:20px;
+}
+.contactIcon:hover{
+  transform:scale(1.15);
+  color:orange;
+}
+.contactItem {
+  display: flex;
+  gap: 0.4em;
+}
+.section4 a{
+
+  font-family: var(--font-body);
+  color: inherit;
+  margin-bottom: 0.4em;
+ transition:color 0.2s ease;
+  
+}
+.section4 a:hover{
+    text-decoration:underline;
+    color:orange;
+}
+
+/* RESPONSIVE */
+@media (max-width:600px){
+  form{
+    grid-template-columns:1fr;
+  }
+  .section4 {
+    padding: 1em 1.2em;
+  }
+}
+
+/* Full-screen semi-transparent overlay */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Popup box in the center */
+.popupBox {
+  padding: 10px 20px;
+  border: 5px solid transparent;
+  background-color: #00000076;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  min-width: 250px;
+  font-family: var(--font-subheading);
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  animation: popupFade 0.3s ease-in-out;
+}
+
+/* Popup colors */
+.popupBox.sending {
+  border-color: #3498db; /* blue */
+}
+
+.popupBox.success {
+  border-color: #2ecc71; /* green */
+}
+
+.popupBox.error {
+  border-color: #e74c3c; /* red */
+}
+
+/* Fade-in animation */
+@keyframes popupFade {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

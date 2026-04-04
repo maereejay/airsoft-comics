@@ -1,38 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+/* theme.css */
+
+:root {
+  /* Colors */
+  --color-bg: #eee8df;
+  --color-highlights: #c4bcb0;
+  --color-outline: #2C365A;
+  --color-purple: #453F8C;
+  --color-navbar: #e6bc7c;
+  /* Fonts */
+  --font-navbar: 'Bangers', cursive;
+  --font-needhelp:  'Caveat', sans-serif;
+  --font-title:'Bungee Outline', cursive;
+  --font-subheading:'Permanent Marker', cursive;
+  --font-body: 'Comic Neue', cursive;
+
+}
+
+body {
+   background-color: var(--color-bg);
+   padding: 1em 2em 0em;
+   overflow-x: hidden;
+  
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
 }

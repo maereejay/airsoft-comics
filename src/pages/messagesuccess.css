@@ -1,0 +1,62 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.msContainer{
+ margin: 3em 0em;
+ background-color: var(--color-bg);
+  background-size: 40px 40px;
+  width: 80vw;
+  min-height:50vh;
+  font-family: 'Open Sans', sans-serif;
+  position:relative;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+/* subtle ink splatter effect */
+.msContainer::before{
+  border: 10px solid var(--color-outline);
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:url("/public/asfalt-dark.png");
+  opacity:.9;
+  pointer-events:none;
+
+}
+
+.ms{
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.185);
+    border-radius: 3px;
+    padding: 2.5em 3em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+  
+
+} 
+
+.ms__text {
+  font-size: clamp(1rem, 2.3vw, 1.3rem);
+  line-height: 1.6;
+  margin-top: 1%;
+  color: green;
+  font-family: var(--font-subheading);
+  text-align: justify;
+  max-width: 520px;
+
+}
+.msCheck{
+  color: white;
+  font-family: var(--font-body);
+  text-align: center;
+  text-decoration: underline;
+}

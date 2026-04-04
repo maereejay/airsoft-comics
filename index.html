@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comic Pill Navigation</title>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui, sans-serif;
+}
+
+body{
+  background:#f5f5f5;
+  padding:50px 15px;
+}
+
+/* CENTER CONTAINER */
+.nav-container{
+  max-width:900px;
+  margin:auto;
+  position:relative;
+}
+
+/* 🔶 BACKGROUND ORANGE PANEL (THE OFFSET RECTANGLE YOU MEANT) */
+.nav-container::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:#e0a458;
+  border-radius:18px;
+  transform:translateY(8px);   /* pushes it slightly down */
+  z-index:0;
+  border:3px solid #000;       /* comic outline */
+}
+
+/* MAIN NAV BAR */
+.navbar{
+  position:relative;
+  z-index:1;
+  background:#f3c27a;
+  border-radius:18px;
+  border:3px solid #000;
+  padding:8px;
+}
+
+/* TAB LIST */
+.nav-list{
+  list-style:none;
+  display:flex;
+  gap:6px;
+}
+
+/* EACH TAB */
+.nav-list li{
+  flex:1;
+  text-align:center;
+  padding:12px 10px;
+  border-radius:40px;
+  cursor:pointer;
+  font-weight:700;
+  position:relative;
+  z-index:1;
+  transition:.25s;
+}
+
+/* ICON STYLE */
+.nav-list li span{
+  display:block;
+  font-size:13px;
+}
+
+/* SLIDING ACTIVE CAPSULE */
+.nav-list li.active{
+  background:#ffe0a6;
+  border:3px solid #000;
+  box-shadow:0 3px 0 #000;
+}
+
+/* HOVER */
+.nav-list li:hover{
+  background:#ffd79a;
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width:650px){
+
+  .nav-list{
+    flex-wrap:wrap;
+  }
+
+  .nav-list li{
+    flex:1 1 45%;
+    font-size:14px;
+    padding:10px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="nav-container">
+
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li class="active">🏠 <span>HOME</span></li>
+      <li>📖 <span>STORY</span></li>
+      <li>🎯 <span>MISSION</span></li>
+      <li>🗺️ <span>ROADMAP</span></li>
+      <li>📄 <span>WHITEPAPER</span></li>
+    </ul>
+  </nav>
+
+</div>
+
+</body>
+</html>
