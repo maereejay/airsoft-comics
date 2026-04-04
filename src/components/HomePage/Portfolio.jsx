@@ -2,9 +2,9 @@ import React, { useEffect, useState, useCallback } from "react";
 import "./Portfolio.css";
 
 const slides = [
-  { image: "/comicpanel.jpg", title: "Storytelling", desc: "Exploring the craft of weaving epic comic book narratives" },
-  { image: "/portfolio/Manga3.jpg", title: "Art Style", desc: "Showcasing the visual styles that bring comics to life" },
-  { image: "/img2.jpg", title: "Character Design", desc: "Diving into the creation of memorable and dynamic characters" },
+  { image: "/comicpanel.JPG", title: "Storytelling", desc: "Exploring the craft of weaving epic comic book narratives" },
+  { image: "/portfolio/Manga3.JPG", title: "Art Style", desc: "Showcasing the visual styles that bring comics to life" },
+  { image: "/img2.JPG", title: "Character Design", desc: "Diving into the creation of memorable and dynamic characters" },
   { image: "/portfolio/Manga2.jpg", title: "Portfolio", desc: "A showcase of our best comic illustration work" }
 ];
 
