@@ -73,9 +73,9 @@ dynamic, high-quality artwork that captivates readers from the very first panel.
           <a href="/pricing" className="text-blue-500 hover:underline">
             View our pricing
           </a>
-          <a onClick={goToContactform} className="text-blue-500 hover:underline">
+          <button onClick={goToContactform} className="text-blue-500 hover:underline">
             Contact us and let’s bring your story to life
-          </a>
+          </button>
         </div>
       </section>
 

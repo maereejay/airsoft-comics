@@ -24,6 +24,7 @@ export default function Gallery(){
   const prev = ()=> setIndex((index-1+images.length)%images.length);
 
   // ESC KEY CLOSE + ARROWS
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(()=>{
     const handler = (e)=>{
       if(index===null) return;

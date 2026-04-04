@@ -38,7 +38,7 @@ export default function Portfolio() {
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   return (
     <section className="mp-section">

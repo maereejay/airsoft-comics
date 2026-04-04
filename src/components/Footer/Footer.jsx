@@ -84,8 +84,8 @@ export default function Footer() {
         <span>Copyright © 2025 Comic Art Studio.</span>
 
         <div className="mftr-links">
-          <a href="#">Terms of Use</a>
-          <a href="#">Privacy Policy</a>
+          <button>Terms of Use</button>
+          <button>Privacy Policy</button>
         </div>
       </div>
 
