@@ -19,7 +19,7 @@ export default function Section3() {
         </div>
         <div>
            <span>3.</span>
-        <h3>SApproval & Production</h3>
+        <h3>Approval & Production</h3>
           <p>Once the sketch is approved, a 50% upfront payment secures your slot and we proceed with the full artwork production — layout, clean line art, inking, and coloring.
 </p>
 </div>

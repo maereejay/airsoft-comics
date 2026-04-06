@@ -7,8 +7,7 @@ export default function Section1() {
   <div className="section1__content">
     <h1 className="section1__title">Comic Book Illustrators</h1>
     <p className="section1__text">
-     Looking for a professional comic book illustrator? <br /> Our global illustrator agency delivers
-expressive, high-quality comic art. 
+    Bring your story to life with professional Comic Illustrators.
 
     </p>
     <div className="sect1contact">
