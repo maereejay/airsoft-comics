@@ -59,6 +59,7 @@
   cursor:pointer;
   box-shadow:4px 4px 0 black;
   transition:.2s;
+     font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 
 .blogFilters button:hover{
@@ -124,10 +125,10 @@
 }
 
 .blogCategory{
-  font-size:.8rem;
   letter-spacing:2px;
   text-transform:uppercase;
   color:#ff3b3b;
+     font-size: clamp(1rem, 1vw, 1rem);
 }
 
 .blogDate{
@@ -154,6 +155,7 @@
   color:#ccc;
   line-height:1.5;
   font-size:.95rem;
+  
 }
 
 /* BUTTON */
@@ -177,7 +179,7 @@
 /* ARTICLE VIEW */
 
 .articleView{
-  
+  padding: 2em 1.5em;
   margin:auto;
 }
 
@@ -218,10 +220,17 @@
   line-height:1.8;
   color:#ddd;
   white-space:pre-line;
+     font-size: clamp(1.2rem, 1.5vw, 1.5rem);
 }
 
 .blogArticle img {
   max-height:350px;
   object-fit: cover;
 
+}
+@media (max-width: 768px) {
+  .wrapper{
+    width: 90vw;
+ 
+  }
 }

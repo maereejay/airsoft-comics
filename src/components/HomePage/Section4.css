@@ -21,6 +21,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 80vw;
   gap: 2em;
   align-items: center;
@@ -59,7 +61,7 @@ width: fit-content;
 .section4 h1 {
   margin-bottom: 0.5em;
   font-family: var(--font-subheading);
-  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   text-shadow:
     3px 3px 0 #000,
     -2px -2px 0 #000,
@@ -70,7 +72,7 @@ width: fit-content;
 .section4 h3 {
   font-family: var(--font-navbar);
   letter-spacing: 0.25em;
-  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  font-size: clamp(0.9rem, 1.5vw, 1.5rem);
   margin-bottom: 0.7em;
   color: orange;
   display: inline-block;
@@ -94,6 +96,7 @@ form {
   min-height: 420px;
   padding: 2em;
   box-shadow: 5px 5px 0 #000;
+   font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 .formField {
@@ -117,6 +120,7 @@ textarea {
   color: white;
   font-family: var(--font-body);
   box-shadow: 3px 3px 0 #000 inset;
+
 }
 
 /* full width text area */
@@ -133,7 +137,7 @@ textarea {
   text-align: center;
   padding: 0.6em 1em;
   font-family: var(--font-needhelp);
-  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  font-size: clamp(1.2rem, 1.4vw, 1.1rem);
   cursor: pointer;
   font-weight: 700;
   transition: all ease-in-out 0.15s;
@@ -231,10 +235,11 @@ textarea {
 @media (max-width: 768px) {
 .section4 {
   padding: 1.5em 1em;
+  width: 110%;
  
 }
 form {
-  width: 270px;
+  width: 290px;
   padding: 1.5em;
 }
 }

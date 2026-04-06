@@ -262,3 +262,8 @@ background: orange;
   margin:10px auto 0;
   line-height:1.6;
 }
+@media (max-width: 768px) {
+  .portfolioPage{
+    width: 90vw;
+  }
+}

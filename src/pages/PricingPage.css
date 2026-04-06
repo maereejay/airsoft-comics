@@ -176,3 +176,9 @@
   border-color: white;
   box-shadow:12px 12px 0 black;
 }
+
+@media (max-width: 768px) {
+  .pricingPage{
+    width: 90vw;
+  }
+}

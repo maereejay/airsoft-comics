@@ -24,7 +24,7 @@
     -2px -2px 0 #000000,
     2px -2px 0 #000000,
     -2px 2px 0 #000000;
-      font-size: clamp(1.3rem, 3vw, 2rem);
+      font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .processContainer{
@@ -70,7 +70,7 @@
 .processContent  span {
     font-family: var(--font-needhelp);
     color: white;
-    font-size: 2.2rem;
+    font-size: 2.3rem;
    
    
 }
@@ -100,7 +100,7 @@
       flex-direction: column;
       gap: 0.1em;
     font-family: var(--font-body);
-     font-size: clamp(0.7rem, 1.3vw, 1.5rem);
+     font-size: clamp(0.8em, 1.3vw, 1.5rem);
 }
 .endsect p span{
     font-size: clamp(0.9rem, 1.5vw, 1.5rem);
@@ -122,4 +122,9 @@
 .endsect p span:hover{
   color: white;
   border-color: orange;
+}
+@media (max-width: 768px) {
+    .section3{
+        width: 85vw;
+    }
 }
