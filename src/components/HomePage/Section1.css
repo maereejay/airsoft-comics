@@ -29,7 +29,7 @@
 /* Heading */
 .section1__title {
   margin-top: 12%;
-  font-size: clamp(1.9rem, 4vw, 2.5rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
   color: white;
     font-family: var(--font-title);
    letter-spacing: 0.05em; 
@@ -100,12 +100,12 @@
         background-size: cover;     
         background-position: center;    
         background-repeat: no-repeat;  
-        padding: 2.5em 2em;
+        padding: 2.5em 1em;
         border-radius: 1px;
 
     }
     .section1Container{
-  width: 110%;
+  width: 115%;
   padding: 0.8em;
 }
     .section1__text {
@@ -122,5 +122,10 @@
     max-width: 100%;
 
  }
+ .section1__button {
+  margin-top: 0.3em;
+ text-align: center;
+ width: 100%;
+}
 }
 

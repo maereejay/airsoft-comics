@@ -12,8 +12,7 @@ export default function Section1() {
     </p>
     <div className="sect1contact">
       <p>
-      Email us or chat with our live support team to discuss your project. <br />
-      Reach out to us to get you started.
+      Email us or chat with our live support team to discuss your project. 
 </p>
     <a href="/portfolio" className="section1__button">
       Explore our portfolio &gt;&gt;&gt;
