@@ -87,13 +87,21 @@
   transition: color 0.3s;
   font-family: 'Permanent Marker', cursive;
     font-size: clamp(0.8rem, 1.6vw, 0.9rem);
-
+    margin-top: 1em;
+ text-align: center;
+ border: 1.5px solid white;
+ border-radius: 5px;
+ padding: 0.3em 0.5em;
  
 }
 
-.section1__button:hover {
-  text-decoration: underline;
+.section1__button:hover{
+  background-color: rgba(255, 166, 0, 0.858);
+  color: black;
+  border-color: black;
 }
+
+
 
 @media (max-width: 768px) {
     .section1 {
@@ -122,10 +130,12 @@
     max-width: 100%;
 
  }
- .section1__button {
-  margin-top: 0.3em;
- text-align: center;
- width: 100%;
-}
+  .btnContainer{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
 }
 

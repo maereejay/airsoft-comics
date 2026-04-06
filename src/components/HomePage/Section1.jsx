@@ -14,9 +14,11 @@ export default function Section1() {
       <p>
       Email us or chat with our live support team to discuss your project. 
 </p>
+    <div className='btnContainer'>
     <a href="/portfolio" className="section1__button">
       Explore our portfolio &gt;&gt;&gt;
       </a>
+      </div>
       </div>
   </div>
 
