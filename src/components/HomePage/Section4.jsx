@@ -116,16 +116,17 @@ export default function Section4() {
             <label>Email</label>
             <input type="email" required />
           </div>
+          <div className="formField">
+            <label>Mobile</label>
+            <input type="tel" required />
+          </div>
 
           <div className="formField">
             <label>Project Name</label>
             <input type="text" required />
           </div>
 
-          <div className="formField">
-            <label>Mobile</label>
-            <input type="tel" required />
-          </div>
+          
 
           <div className="formField full">
             <label>Project Details</label>
